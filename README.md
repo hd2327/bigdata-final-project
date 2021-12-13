@@ -17,3 +17,12 @@ There is a github repository for this project: https://github.com/hd2327/bigdata
 4. data_visualization.ipynb :  the data visualization file with Spark and Matplotlib, please open by **jupyter notebook**
 
 5. report.pdf : the report
+
+# how to open
+At first，we should run **data_cleaning_improve.ipynb** in jupyter notebook to get the result after cleaning. The output is out.zip and there is a file named out.csv.
+
+Then we need put the out.csv to HDFS on the Peel cluster by command *hfs -put out.csv*. Then we need update the code in **data_analysis.zpln** and run it in school zepplin environment.
+
+The code to be modified is parking_v = sc.textFile("/user/hd2327/data_cleaning_output.csv"). The hd2327 is my netid. After that, the data_analysis.zpln can run.
+
+In the end, open **data_visualization.ipynb** and run it in jupyter notebook to look at the result.
